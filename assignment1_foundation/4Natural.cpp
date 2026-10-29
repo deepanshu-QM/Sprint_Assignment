@@ -7,3 +7,28 @@ Constraints
 The sum can reach 5×10^11 - use 64-bit integers.
 
 */
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    long long N,formula ,sum= 0, whilesum=0;
+    cin>>N;
+
+    for(long long  i=1;i<=N;i++){
+        sum+= i;
+    }
+    cout<<"For loop:"<<sum<<endl;
+    long long  i=1;
+
+    while(i <= N){
+        whilesum +=i;
+        i++;
+    }
+    cout<<"While loop:"<<whilesum<<endl;
+    
+    formula = N*(N+1)/2;
+    cout<<"Formula: "<<formula<<endl;
+    
+    return 0;
+}
