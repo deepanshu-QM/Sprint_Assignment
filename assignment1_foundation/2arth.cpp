@@ -17,7 +17,7 @@ int main(){
     long long a,b;
     cin>>a>>b;
     cout<<"Sum="<<a+b<<", "<<"Diff="<<a-b<<", "<<"Product="<<a*b<<", "<<"Quotient="<<a/b<<endl;
-    int temp;
+    long long  temp;
     temp = a;
     a = b;
     b = temp;

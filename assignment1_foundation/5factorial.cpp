@@ -9,7 +9,7 @@ Constraints
 0 ≤ N ≤ 20 (20! = 2432902008176640000 still fits in 64 bits)
 */
 
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 
@@ -21,9 +21,12 @@ int main(){
     for(int i=1;i<=N;i++){
         fac *=i;
     }
-    
     cout<<N<<"! = "<<fac<<endl;
     
+    if(N < 1){
+        cout<<"Smallest factor > 1 : none"<<endl;
+    }
+
     
     
 }
