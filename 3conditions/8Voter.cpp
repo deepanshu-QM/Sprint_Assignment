@@ -14,3 +14,29 @@ Constraints
 
 0 ≤ A ≤ 150
 C, D ∈ {0, 1}*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int A,C,D;
+    cin>>A>>C>>D;
+
+    vector<string>v;
+    if(A < 18) v.push_back("Too Young");
+    if(C == 0) v.push_back("Not a Citizen");
+    if(D == 1) v.push_back("Disqualified");
+
+    if(v.empty()){
+        cout<<"Eligible\n";
+    }else{
+        cout<<"Not Eligible - ";
+
+        for(size_t i=0;i<v.size();i++){
+            if(i>0)cout<<" , ";
+            cout<<v[i];
+        }
+        cout<<"\n";
+    }
+    return 0;
+} 
