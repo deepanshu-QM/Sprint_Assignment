@@ -18,3 +18,12 @@ int main(){
     cout<<sum<<" ";
     return 0;
 }
+
+//Approch 2 :
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    
+}
