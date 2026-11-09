@@ -15,3 +15,36 @@ Constraints
 -1000 ≤ T ≤ 1000
 Scale is one of C, F, K (uppercase).*/
 
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    double t, f, c, k;
+    char scale;
+
+    cin >> t >> scale;
+
+    //cout << fixed << setprecision(2);
+
+    if(scale == 'C'){
+        f = (t * 9.0/5.0) + 32;
+        k = t + 273.15;
+
+        cout << "F=" << f << ", K=" << k;
+    }
+    else if(scale == 'F'){
+        c = (t - 32) * 5.0/9.0;
+        k = c + 273.15;
+
+        cout << "C=" << c << ", K=" << k;
+    }
+    else if(scale == 'K'){
+        c = t - 273.15;
+        f = (c * 9.0/5.0) + 32;
+
+        cout << "C=" << c << ", F=" << f;
+    }
+
+    cout << endl;
+}
