@@ -38,3 +38,35 @@ int main(){
       cout<<"Not Anagram"<<endl;
 
 }
+
+
+/* Second Approch : */
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string a,b;
+    getline(cin,a);
+    getline(cin,b);
+
+    if(a.size() != b.size()){
+        cout<<"Not Anagram";
+        return 0;
+    }
+
+    int freq[256] = {0};
+
+    for(int i=0;i<a.size();i++){
+        freq[tolower((unsigned char)a[i])]++;
+        freq[tolower((unsigned char)b[i])]--;
+    }
+
+    for(int i=0;i<256;i++){
+        if(freq[i] != 0){
+            cout<<"Not Anagram"<<endl;
+            return 0;
+        }
+        
+    
+    }
+    cout<<"Anagram"<<endl;
+}

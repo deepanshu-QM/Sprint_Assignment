@@ -18,27 +18,31 @@ using namespace std;
 
 int main(){
 
-    string s,orignal,ss;
+    string s,orignal,ss,temp;
     getline(cin,s);
 
-    bool isPalindorm = true;
 
     orignal = s;
 
-    for(int i=s.size();i>0;i--){
-        ss = tolower(s[i]);
-        if(ss == " ")
+    for(int i=s.size()-1;i>=0;i--){
+        if(s[i] == ' ')
            continue;
-        if(ss == orignal)
-           isPalindorm = false;
-           break;
         
+        ss += tolower(s[i]);
     }
 
-    if(isPalindorm)
-       cout<<"True"<<endl;
-    else
-       cout<<"False"<<endl;
+    temp = "";
 
+    for(int i=0;i<orignal.size();i++){
+        if(orignal[i] == ' ')
+           continue;
+        temp += tolower(orignal[i]);
+    }
+    orignal = temp;
+
+    if(orignal == ss)
+      cout<<"True"<<endl;
+    else
+      cout<<"False"<<endl;
 
 }
